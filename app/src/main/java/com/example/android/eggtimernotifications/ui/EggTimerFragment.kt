@@ -61,31 +61,27 @@ class EggTimerFragment : Fragment() {
 
     private fun createChannel(channelId: String, channelName: String) {
         // TODO: Step 1.6 START create a channel
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationChannel = NotificationChannel(
+                channelId,
+                channelName,
+                // TODO: Step 2.4 change importance
+                NotificationManager.IMPORTANCE_LOW
+            )
+            // TODO: Step 2.6 disable badges for this channel
 
-        fun createChannel(channelId: String, channelName: String) {
-            // TODO: Step 1.6 START create a channel
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val notificationChannel = NotificationChannel(
-                    channelId,
-                    channelName,
-                    // TODO: Step 2.4 change importance
-                    NotificationManager.IMPORTANCE_LOW
-                )
-                // TODO: Step 2.6 disable badges for this channel
+            notificationChannel.enableLights(true)
+            notificationChannel.lightColor = Color.RED
+            notificationChannel.enableVibration(true)
+            notificationChannel.description = "Time for breakfast"
 
-                notificationChannel.enableLights(true)
-                notificationChannel.lightColor = Color.RED
-                notificationChannel.enableVibration(true)
-                notificationChannel.description = "Time for breakfast"
+            val notificationManager = requireActivity().getSystemService(
+                NotificationManager::class.java
+            )
+            notificationManager.createNotificationChannel(notificationChannel)
 
-                val notificationManager = requireActivity().getSystemService(
-                    NotificationManager::class.java
-                )
-                notificationManager.createNotificationChannel(notificationChannel)
+            // TODO: Step 1.6 END create a channel
 
-                // TODO: Step 1.6 END create a channel
-
-            }
         }
     }
 
