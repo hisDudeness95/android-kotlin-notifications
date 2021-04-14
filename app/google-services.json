@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "780543113714",
+    "project_id": "matt-egg-timer",
+    "storage_bucket": "matt-egg-timer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780543113714:android:0f52d378c3993f4e45d36b",
+        "android_client_info": {
+          "package_name": "com.example.android.eggtimernotifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780543113714-dmra8cq1h223745jsbkkvr9f742g7gpc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeTXGX793kusWaejzeajG4_ls_IIsi0X4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780543113714-dmra8cq1h223745jsbkkvr9f742g7gpc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
